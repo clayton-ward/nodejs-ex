@@ -79,7 +79,10 @@ app.get('/', function (req, res) {
     if(err){
       console.log(err);
     }
-    console.log(data);
+    var a = data.split("\n");
+    for( var line of a ) {
+      console.log(line);
+    }
   });
 });
 
