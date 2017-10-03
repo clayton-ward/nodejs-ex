@@ -74,6 +74,13 @@ app.get('/', function (req, res) {
   } else {
     res.render('index.html', { pageCountMessage : null, pod: hostname});
   }
+  fs = require('fs')
+  fs.readFile('index.html', 'utf8', function (err,data) {
+    if(err){
+      console.log(err);
+    }
+    console.log(data);
+  });
 });
 
 app.get('/pagecount', function (req, res) {
