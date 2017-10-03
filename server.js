@@ -75,7 +75,7 @@ app.get('/', function (req, res) {
     res.render('index.html', { pageCountMessage : null, pod: hostname});
   }
   fs = require('fs')
-  fs.readFile('index.html', 'utf8', function (err,data) {
+  fs.readFile('/opt/app-root/src/views/index.html', 'utf8', function (err,data) {
     if(err){
       console.log(err);
     }
